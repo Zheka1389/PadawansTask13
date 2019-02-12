@@ -36,7 +36,7 @@ namespace PadawansTask13
         }
         public string Info()
         {
-            string info = $"Surname:{_surname}, Age:{_age}";
+            string info = $"Surname: {_surname}, Age: {_age}";
             return info;
         }
     }

@@ -16,8 +16,15 @@ namespace PadawansTask13
         }
         public Employee(string surname, int age)
         {
-            _surname = surname;
-            _age = age;
+            _surname = surname ?? throw new ArgumentNullException();
+            if(age <= 0)
+            {
+                throw new ArgumentException();
+            }
+            else
+            {
+                _age = age;
+            }
         }
         private string Age()
         {
